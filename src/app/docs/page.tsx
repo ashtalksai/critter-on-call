@@ -645,6 +645,344 @@ export default function DocsPage() {
                 ))}
               </div>
             </div>
+
+            {/* Brand Voice */}
+            <div className="bg-[#1A1F2E] rounded-2xl p-8 border border-white/5 mt-8 mb-8">
+              <h3 className="text-lg font-semibold text-white mb-6 flex items-center gap-2">
+                <MessageSquare className="text-blue" size={20} />
+                Brand Voice
+              </h3>
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <div className="bg-[#0A0F1C] rounded-xl p-5">
+                  <h4 className="text-white font-medium mb-3 text-sm uppercase tracking-wider text-orange">Tone</h4>
+                  <p className="text-white/70">Calm, confident dispatch operator — like a 911 dispatcher who has seen it all.</p>
+                  <ul className="mt-3 space-y-2 text-white/50 text-sm">
+                    <li>✓ Direct and reassuring</li>
+                    <li>✓ Professional but warm</li>
+                    <li>✓ Action-oriented</li>
+                    <li>✓ Never panicked or urgent in tone</li>
+                  </ul>
+                </div>
+                <div className="bg-[#0A0F1C] rounded-xl p-5">
+                  <h4 className="text-white font-medium mb-3 text-sm uppercase tracking-wider text-blue">Key Phrases</h4>
+                  <ul className="space-y-2 text-white/70 text-sm">
+                    <li>&quot;Help is on the way&quot;</li>
+                    <li>&quot;We&apos;ve got this&quot;</li>
+                    <li>&quot;Your operator is 12 minutes away&quot;</li>
+                    <li>&quot;Wildlife emergency? We connect you instantly&quot;</li>
+                    <li>&quot;No more calling around&quot;</li>
+                  </ul>
+                </div>
+                <div className="bg-[#0A0F1C] rounded-xl p-5">
+                  <h4 className="text-white font-medium mb-3 text-sm uppercase tracking-wider text-red-500">What We Never Say</h4>
+                  <ul className="space-y-2 text-white/50 text-sm line-through">
+                    <li>&quot;Don&apos;t worry&quot; (dismissive)</li>
+                    <li>&quot;Pest control&quot; (we&apos;re dispatch)</li>
+                    <li>&quot;Call us for a quote&quot; (friction)</li>
+                    <li>&quot;We&apos;ll get back to you&quot; (delays)</li>
+                    <li>&quot;Critter problem&quot; (too casual)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Content Strategy */}
+            <div className="bg-[#1A1F2E] rounded-2xl p-8 border border-white/5 mb-8">
+              <h3 className="text-lg font-semibold text-white mb-6">Content Strategy</h3>
+              <div className="space-y-6">
+                {/* Blog Topics */}
+                <div className="bg-[#0A0F1C] rounded-xl p-5">
+                  <h4 className="text-white font-medium mb-4 flex items-center gap-2">
+                    <TrendingUp className="text-orange" size={18} />
+                    SEO Blog Topics
+                  </h4>
+                  <div className="space-y-3">
+                    {[
+                      { title: "Raccoon in Chimney? Here's What to Do (Before You Climb Up)", keyword: "raccoon in chimney", volume: "2.4K/mo" },
+                      { title: "How Much Does Emergency Wildlife Removal Cost? (2026 Pricing Guide)", keyword: "wildlife removal cost", volume: "1.8K/mo" },
+                      { title: "Bat in the House: 24-Hour Emergency Removal Guide", keyword: "bat in house emergency", volume: "3.1K/mo" },
+                      { title: "5 Signs You Need Wildlife Removal NOW (Not Tomorrow)", keyword: "wildlife removal near me", volume: "14K/mo" },
+                      { title: "After-Hours Wildlife Emergency? Why Directories Fail You", keyword: "24 hour wildlife removal", volume: "1.2K/mo" }
+                    ].map((topic, i) => (
+                      <div key={i} className="flex items-start justify-between border-l-2 border-l-orange pl-4">
+                        <div>
+                          <p className="text-white/80 text-sm">{topic.title}</p>
+                          <p className="text-white/40 text-xs mt-1">Keyword: {topic.keyword}</p>
+                        </div>
+                        <span className="text-orange text-xs font-mono bg-orange/10 px-2 py-1 rounded">{topic.volume}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Social Cadence */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                  <div className="bg-[#0A0F1C] rounded-xl p-5">
+                    <h4 className="text-white font-medium mb-4">Social Media Cadence</h4>
+                    <div className="space-y-3 text-sm">
+                      <div className="flex justify-between items-center">
+                        <span className="text-white/70">Twitter/X</span>
+                        <span className="text-orange font-medium">3x/week</span>
+                      </div>
+                      <div className="flex justify-between items-center">
+                        <span className="text-white/70">LinkedIn</span>
+                        <span className="text-blue font-medium">2x/week</span>
+                      </div>
+                      <div className="flex justify-between items-center">
+                        <span className="text-white/70">Reddit (r/homeowners)</span>
+                        <span className="text-purple-400 font-medium">1x/week</span>
+                      </div>
+                      <div className="flex justify-between items-center">
+                        <span className="text-white/70">Facebook Groups</span>
+                        <span className="text-blue font-medium">2x/week</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bg-[#0A0F1C] rounded-xl p-5">
+                    <h4 className="text-white font-medium mb-4">Email Sequence (Welcome Series)</h4>
+                    <div className="space-y-2 text-sm text-white/60">
+                      <div className="flex items-start gap-2">
+                        <span className="text-orange font-mono">Day 0:</span>
+                        <span>Welcome + how to submit first request</span>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <span className="text-orange font-mono">Day 2:</span>
+                        <span>Why we&apos;re faster than directories</span>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <span className="text-orange font-mono">Day 5:</span>
+                        <span>Meet the operators in your area</span>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <span className="text-orange font-mono">Day 10:</span>
+                        <span>Priority tier benefits (upgrade CTA)</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Social Media Campaigns */}
+            <div className="bg-[#1A1F2E] rounded-2xl p-8 border border-white/5 mb-8">
+              <h3 className="text-lg font-semibold text-white mb-6">Social Media Campaigns — First 5 Posts</h3>
+              <div className="space-y-4">
+                {[
+                  {
+                    platform: "Twitter/X",
+                    copy: "Raccoon in your chimney at 2 AM? 🦝\n\nNo more calling 10 companies and leaving voicemails.\n\nCritter On Call dispatches wildlife pros to you in minutes — like Uber, but for emergencies.\n\nLive ETA tracking. Transparent pricing. No panic.\n\n→ critteroncall.com",
+                    image: "Screenshot of ETA countdown interface with operator en route",
+                    hashtags: "#WildlifeRemoval #HomeEmergency #PropTech",
+                    color: "from-blue-500/20 to-blue/10"
+                  },
+                  {
+                    platform: "LinkedIn",
+                    copy: "We built Uber for wildlife emergencies.\n\nThe problem: Homeowners can't find help after-hours. Operators want consistent leads. Both are invisible to each other.\n\nThe solution: Real-time dispatch. SMS blast to 5 nearby operators. First to accept gets the job.\n\n14K people search \"wildlife removal near me\" every month. Zero marketplaces exist.\n\nWe're changing that. Live now at critteroncall.com",
+                    image: "Bento-style product showcase: request form → dispatch → operator dashboard → ETA tracking",
+                    hashtags: "#Startup #Marketplace #EmergencyServices",
+                    color: "from-blue to-blue-hover/20"
+                  },
+                  {
+                    platform: "Reddit (r/homeowners)",
+                    copy: "I built a tool to solve the \"wildlife emergency at 2 AM\" problem\n\n[Soft launch post]\n\nAfter seeing countless posts here asking \"anyone know a 24-hour wildlife removal service?\", I built Critter On Call.\n\nHow it works:\n1. Submit request (location + animal type)\n2. SMS blast to operators within 25 miles\n3. First to accept gets the job\n4. You get live ETA tracking\n\nNo more calling around. No hidden fees.\n\nCurrently live in [test markets]. Feedback welcome.",
+                    image: "Simple flowchart graphic: Submit → Match → Track",
+                    hashtags: "N/A (Reddit = no hashtags, conversational post)",
+                    color: "from-orange/20 to-red-500/10"
+                  },
+                  {
+                    platform: "Facebook Groups (Local community groups)",
+                    copy: "🦝 Need wildlife removal after-hours? Try this new tool\n\nCritter On Call connects homeowners with wildlife pros instantly — no more calling around.\n\nReal-time dispatch, live tracking, transparent pricing. Like Uber for emergencies.\n\nFree to use. Priority tier available for $9.99/mo.\n\nCheck it out: critteroncall.com\n\n(Local operators: we're looking for partners! DM for details)",
+                    image: "Hero image from landing page: \"Help is 12 minutes away\" with ETA countdown visual",
+                    hashtags: "N/A (Facebook Groups = community tone, no heavy hashtags)",
+                    color: "from-blue/20 to-orange/10"
+                  },
+                  {
+                    platform: "Twitter/X (Operator-focused)",
+                    copy: "Wildlife removal operators: tired of slow seasons?\n\nCritter On Call sends you emergency leads via SMS.\n\nYou choose:\n✓ Accept jobs in your service area\n✓ Set your own rates\n✓ Get paid automatically\n\nNo marketing. No cold calling. Just leads.\n\n→ critteroncall.com/operator/signup",
+                    image: "Operator dashboard screenshot showing incoming requests with accept/decline buttons",
+                    hashtags: "#WildlifeControl #SmallBusiness #Leads",
+                    color: "from-green-500/20 to-blue/10"
+                  }
+                ].map((post, i) => (
+                  <div key={i} className={`bg-gradient-to-br ${post.color} rounded-xl p-6 border border-white/5`}>
+                    <div className="flex items-center gap-2 mb-3">
+                      <span className="bg-white/10 text-white px-3 py-1 rounded-full text-xs font-bold">POST {i + 1}</span>
+                      <span className="text-white/60 text-sm">{post.platform}</span>
+                    </div>
+                    <div className="bg-[#0A0F1C] rounded-lg p-4 mb-3">
+                      <p className="text-white/80 text-sm whitespace-pre-line">{post.copy}</p>
+                    </div>
+                    <div className="flex flex-col gap-2 text-xs">
+                      <div className="flex items-start gap-2">
+                        <span className="text-white/40 min-w-[80px]">Image:</span>
+                        <span className="text-white/60">{post.image}</span>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <span className="text-white/40 min-w-[80px]">Hashtags:</span>
+                        <span className="text-white/60">{post.hashtags}</span>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Content Calendar */}
+            <div className="bg-[#1A1F2E] rounded-2xl p-8 border border-white/5 mb-8">
+              <h3 className="text-lg font-semibold text-white mb-6 flex items-center gap-2">
+                <Clock className="text-orange" size={20} />
+                Content Calendar — Week 1-4
+              </h3>
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="border-b border-white/10">
+                      <th className="text-left text-white/60 font-medium py-3 px-4">Day</th>
+                      <th className="text-left text-white/60 font-medium py-3 px-4">Platform</th>
+                      <th className="text-left text-white/60 font-medium py-3 px-4">Content</th>
+                      <th className="text-left text-white/60 font-medium py-3 px-4">Status</th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-white/70">
+                    {[
+                      { day: "Mon W1", platform: "Twitter/X", content: "Launch announcement (Post 1)" },
+                      { day: "Tue W1", platform: "LinkedIn", content: "Product showcase (Post 2)" },
+                      { day: "Wed W1", platform: "Reddit r/homeowners", content: "Soft launch post (Post 3)" },
+                      { day: "Thu W1", platform: "Facebook Groups", content: "Community intro (Post 4)" },
+                      { day: "Fri W1", platform: "Twitter/X", content: "Operator recruitment (Post 5)" },
+                      { day: "Mon W2", platform: "Twitter/X", content: "User testimonial (if available)" },
+                      { day: "Wed W2", platform: "LinkedIn", content: "Behind-the-scenes build story" },
+                      { day: "Fri W2", platform: "Reddit r/Entrepreneur", content: "Marketplace model discussion" },
+                      { day: "Mon W3", platform: "Twitter/X", content: "Feature highlight: Live ETA tracking" },
+                      { day: "Tue W3", platform: "Facebook Groups", content: "Operator success story" },
+                      { day: "Thu W3", platform: "LinkedIn", content: "Market gap analysis" },
+                      { day: "Mon W4", platform: "Twitter/X", content: "Month 1 metrics (if positive)" },
+                      { day: "Wed W4", platform: "Reddit r/homeowners", content: "AMA: Ask about wildlife emergencies" },
+                      { day: "Fri W4", platform: "LinkedIn", content: "Operator onboarding improvements" }
+                    ].map((item, i) => (
+                      <tr key={i} className="border-b border-white/5">
+                        <td className="py-3 px-4 font-mono text-xs text-orange">{item.day}</td>
+                        <td className="py-3 px-4">{item.platform}</td>
+                        <td className="py-3 px-4 text-white/60">{item.content}</td>
+                        <td className="py-3 px-4">
+                          <span className="bg-warning/20 text-warning px-2 py-1 rounded text-xs font-medium">Draft</span>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            {/* Budget */}
+            <div className="bg-[#1A1F2E] rounded-2xl p-8 border border-white/5 mb-8">
+              <h3 className="text-lg font-semibold text-white mb-6 flex items-center gap-2">
+                <DollarSign className="text-green-500" size={20} />
+                Marketing Budget (Month 1)
+              </h3>
+              <div className="space-y-4">
+                <div className="bg-[#0A0F1C] rounded-xl p-5">
+                  <h4 className="text-white font-medium mb-4">Paid Channels (If Ash Approves GO)</h4>
+                  <div className="space-y-3 text-sm">
+                    <div className="flex justify-between items-center pb-3 border-b border-white/5">
+                      <div>
+                        <p className="text-white/70">Google Local Services Ads</p>
+                        <p className="text-white/40 text-xs">Target: &quot;wildlife removal near me&quot; after-hours</p>
+                      </div>
+                      <span className="text-green-500 font-mono">$500</span>
+                    </div>
+                    <div className="flex justify-between items-center pb-3 border-b border-white/5">
+                      <div>
+                        <p className="text-white/70">Facebook/Instagram Ads</p>
+                        <p className="text-white/40 text-xs">Retargeting visitors, suburban homeowner demo</p>
+                      </div>
+                      <span className="text-green-500 font-mono">$300</span>
+                    </div>
+                    <div className="flex justify-between items-center pb-3 border-b border-white/5">
+                      <div>
+                        <p className="text-white/70">Reddit Promoted Posts</p>
+                        <p className="text-white/40 text-xs">r/homeowners, r/HomeImprovement</p>
+                      </div>
+                      <span className="text-green-500 font-mono">$200</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-[#0A0F1C] rounded-xl p-5">
+                  <h4 className="text-white font-medium mb-4">Tools & Software</h4>
+                  <div className="space-y-3 text-sm">
+                    <div className="flex justify-between items-center pb-3 border-b border-white/5">
+                      <div>
+                        <p className="text-white/70">Buffer/Hootsuite (social scheduling)</p>
+                        <p className="text-white/40 text-xs">Already have account</p>
+                      </div>
+                      <span className="text-white/40 font-mono">$0</span>
+                    </div>
+                    <div className="flex justify-between items-center pb-3 border-b border-white/5">
+                      <div>
+                        <p className="text-white/70">Canva Pro (social graphics)</p>
+                        <p className="text-white/40 text-xs">Existing subscription</p>
+                      </div>
+                      <span className="text-white/40 font-mono">$0</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-gradient-to-br from-orange/20 to-blue/20 rounded-xl p-6 border border-white/10">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <p className="text-white/60 text-sm mb-1">Total Month 1 Budget</p>
+                      <p className="text-white text-2xl font-bold font-mono">$1,000</p>
+                      <p className="text-white/40 text-xs mt-2">Expected CPA: &lt;$50 per operator signup</p>
+                      <p className="text-white/40 text-xs">Target: 20 operator signups, 50+ homeowner requests</p>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-white/60 text-sm mb-1">Organic (free) channels:</p>
+                      <p className="text-white/80 text-xs">Reddit, Twitter, LinkedIn, Facebook Groups</p>
+                      <p className="text-green-500 text-xs mt-1">↑ Primary focus for MVP launch</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Pitch Deck Content Guide */}
+            <div className="bg-gradient-to-br from-purple-500/30 via-orange/20 to-blue/30 rounded-2xl p-8 border border-white/10 mb-8">
+              <h3 className="text-xl font-semibold text-white mb-6 flex items-center gap-2">
+                <Presentation className="text-purple-400" size={24} />
+                Pitch Deck Content Guide
+              </h3>
+              <p className="text-white/70 mb-6">
+                The <Link href="/pitch" className="text-orange hover:underline">/pitch</Link> page uses this content structure. Each slide is pre-built — content below provides the narrative.
+              </p>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                {[
+                  { slide: "1. Title", content: "Critter On Call\n\"Emergency wildlife removal dispatch — live ETA tracking like Uber\"" },
+                  { slide: "2. Problem", content: "Homeowners can't find help after-hours. Operators want leads. Both invisible to each other.\n\nData: 14K monthly searches, zero marketplace results." },
+                  { slide: "3. Solution", content: "Real-time dispatch platform. Submit request → SMS to 5 operators → First accepts → Live ETA tracking.\n\nScreenshot: ETA countdown interface." },
+                  { slide: "4. Market Size", content: "TAM: $5B (US wildlife removal market)\nSAM: $500M (after-hours emergency segment)\nSOM: $50M (25-mile radius model, 10 markets)\n\nGrowth: 8% YoY" },
+                  { slide: "5. How It Works", content: "3-step process:\n1. Homeowner submits (panic-friendly form)\n2. SMS blast to operators (25-mile radius)\n3. Live tracking (operator en route with ETA)" },
+                  { slide: "6. Traction", content: "Community signals:\n• Reddit threads: \"24-hour raccoon removal?\"\n• Keyword volume: 14K/mo searches\n• Competitor weakness: Phone-only, slow response" },
+                  { slide: "7. Business Model", content: "Free tier: Basic connection\n$9.99/mo: Priority dispatch\n$49/mo: Property manager portfolio\n\nRevenue: Month 6 target = 500 connections = $75K-150K GMV" },
+                  { slide: "8. Competition", content: "Critter Control: National franchise, phone-only\nThumbtack/Yelp: Directories, not dispatch\n\nOur edge: Real-time dispatch + live tracking" },
+                  { slide: "9. GTM", content: "Phase 1: 3 test markets, 10-15 operators each\nChannels: SEO, Google Local Services, operator partnerships\nTimeline: Weeks 1-4 soft launch → Months 2-3 expansion" },
+                  { slide: "10. Team / Ask", content: "ChimeStream (Stravix portfolio company)\nBuilt by: @planner, @designer, @coder, @marketer agents\n\nAsk: Seed funding or operator partnerships for geographic expansion" }
+                ].map((item, i) => (
+                  <div key={i} className="bg-[#0A0F1C] rounded-xl p-5 border border-white/5">
+                    <div className="flex items-center gap-2 mb-3">
+                      <span className="bg-purple-500/20 text-purple-300 px-2 py-1 rounded text-xs font-mono">Slide {i + 1}</span>
+                      <span className="text-white font-medium text-sm">{item.slide}</span>
+                    </div>
+                    <p className="text-white/60 text-xs whitespace-pre-line">{item.content}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-6 bg-[#0A0F1C] rounded-xl p-5 border border-white/5">
+                <p className="text-white/60 text-sm">
+                  <strong className="text-orange">Note for @artist:</strong> Generate social media graphics with these messaging pillars. Hero images should match the &quot;urgent orange + calm blue&quot; palette.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 
